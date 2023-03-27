@@ -26,7 +26,7 @@ test('Limpiar el input de busqueda', async ({ page }) => {
 
   await searchBox.fill('somerandomtext');
 
-  await expect(searchBox).toHaveText('somerandomtext');
+  await expect(searchBox).toHaveAttribute('value', 'somerandomtext');
 
   await page.getByRole('button', { name: 'Clear the query' }).click();
 
